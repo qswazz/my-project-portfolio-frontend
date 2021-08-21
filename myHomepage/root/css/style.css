@@ -62,7 +62,7 @@
 }
 
 /* ----------- Body (aside) -------------- */
-#body .tab-menu>ul
+#body>.body-aside>.content-box>.list-tabs
 {
     display: flex;
     list-style: none;
@@ -71,24 +71,19 @@
     align-items: center;
 }
 
-    #body .tab-menu>ul>li
+    #body>.body-aside>.content-box>.list-tabs>li
     {
         flex-grow: 1;
         text-align: center;
-        /* border-style: solid;
-        border-left-width: 1px;
-        border-right-width: 1px;
-        border-top-width: 0px;
-        border-bottom-width: 1px; */
     }
     
-    #body .tab-menu>ul>li>a
+    #body>.body-aside>.content-box>.list-tabs .item-tab
     {
         display: block;
         line-height: 50px;
     }
     
-    #body .tab-menu>ul>li:hover
+    #body>.body-aside>.content-box>.list-tabs>li:hover
     {
         background:red;
     }
@@ -97,36 +92,27 @@
     
     
 /* ----------- Body (main) -------------- */
-#body>main>.tab-content
+#body>main
+{
+    background: seagreen;
+}
+
+#body>main>.content-box
 {
     padding: 50px 20px;
 }
 
-#body>main .main-portfolio-video img
+#body>main>.content-box .video-portfolio>img
 {
     float: left;
     margin-right: 20px;
 }
 
-#body>main .main-portfolio-video br
+#body>main>.content-box .video-portfolio br
 {
     clear: both;
 }
 
-/* #body>main>.content-box>.tab-items
-{
-    display: none;
-}
-
-#body>main>.content-box>.tab-items.active
-{
-    display: inline-block;
-} */
-
-/* section.main-portfolio-video br
-{
-    clear: both;
-} */
 
 
 
@@ -146,7 +132,3 @@
 /* ----------- Test -------------- */
 
 
-#body main
-{
-    background: seagreen;
-}
