@@ -1,0 +1,152 @@
+@import url(reset.css);
+
+.backslash
+{
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" /></svg>');
+}
+
+.outline-h1
+{
+    display: none !important;
+}
+
+
+/* ----------- Header -------------- */
+#header
+{
+    background: darkslategrey;
+}
+
+    #header>.content-box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        padding: 50px;
+        --line-height: 70px;
+    }
+
+        #header>.content-box>.pic-face
+        {
+            margin-right: 30px;
+            margin-bottom: 30px;
+        }
+
+        #header>.content-box .info dt
+        {
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+
+        #header>.content-box .info dl
+        {
+            width: 150%;
+        }
+    
+            #header>.content-box .info>dl>dt,dd
+            {
+                margin-bottom: 10px;
+            }
+    
+
+
+/* ----------- Body -------------- */    
+#body
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ----------- Body (aside) -------------- */
+#body .tab-menu>ul
+{
+    display: flex;
+    list-style: none;
+    background: darkslategrey;
+    justify-content: center;
+    align-items: center;
+}
+
+    #body .tab-menu>ul>li
+    {
+        flex-grow: 1;
+        text-align: center;
+        /* border-style: solid;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        border-top-width: 0px;
+        border-bottom-width: 1px; */
+    }
+    
+    #body .tab-menu>ul>li>a
+    {
+        display: block;
+        line-height: 50px;
+    }
+    
+    #body .tab-menu>ul>li:hover
+    {
+        background:red;
+    }
+
+
+    
+    
+/* ----------- Body (main) -------------- */
+#body>main>.tab-content
+{
+    padding: 50px 20px;
+}
+
+#body>main .main-portfolio-video img
+{
+    float: left;
+    margin-right: 20px;
+}
+
+#body>main .main-portfolio-video br
+{
+    clear: both;
+}
+
+/* #body>main>.content-box>.tab-items
+{
+    display: none;
+}
+
+#body>main>.content-box>.tab-items.active
+{
+    display: inline-block;
+} */
+
+/* section.main-portfolio-video br
+{
+    clear: both;
+} */
+
+
+
+
+
+/* ----------- Footer -------------- */
+#footer>.content-box
+{
+    background: dimgray;
+    padding: 50px;
+    text-align: center;
+}
+
+
+
+
+/* ----------- Test -------------- */
+
+
+#body main
+{
+    background: seagreen;
+}
