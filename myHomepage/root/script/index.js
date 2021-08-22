@@ -1,22 +1,30 @@
+//#region [Tab Function]
 const tabs = document.querySelectorAll(".item-tab");
 const tabContents = document.querySelectorAll(".item-tab-content");
 
-console.log(tabs);
-console.log(tabContents);
-
-tabs.forEach(function(x)
+tabs.forEach(function(t)
             {
-                x.addEventListener("click", clickTabs);
+                t.addEventListener("click", clickTabs);
             });
 
-function clickTabs(x)
+function clickTabs(t)
 {
-    x.preventDefault();
+    t.preventDefault();
 
-    tabContents.forEach(function(y)
+    tabContents.forEach(function(tc)
     {
-        y.classList.remove("active");
+        tc.classList.remove("active");
     });
 
-    //
+    tabs.forEach(function(t)
+    {
+        t.classList.remove("active");
+    });
+    
+    const selectedTab = this.getAttribute("href");
+    const focusedTab = document.querySelector(selectedTab);
+
+    this.classList.add("active");
+    focusedTab.classList.add("active");    
 }
+//#endregion [Tab Function]
