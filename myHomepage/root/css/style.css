@@ -46,8 +46,7 @@
             width: 150%;
         }
     
-            /* 수정 필요 - 태그명으로 인식해서 전부 수정됨. */
-            #header>.content-box .info>dl>dt,dd
+            #header>.content-box>.info>.definition-list>dt:nth-of-type(n)~dd:nth-of-type(n)
             {
                 margin-bottom: 10px;
             }
@@ -103,6 +102,7 @@
     {
         display: block;
         line-height: 50px;
+		transition: background-color 500ms ease 10ms
     }
     
     #body>.body-aside>.content-box>.list-tabs>li>.item-tab:hover
@@ -182,23 +182,17 @@
 {
     font-size: 70%;
     margin-left: 20px;
+	margin-bottom: 20px;
 }
 
 #body>main>.content-box>.item-tab-content .definition-list dd:nth-of-type(n)::before
 {
     content: "* 기간(년, 월) : ";
-    margin-bottom: 0px;
-}
-#body>main>.content-box>.item-tab-content .definition-list dd:nth-of-type(2n)::before
-{
-    content: "* 소재지 : ";
-    margin-bottom: 0px;
 }
 
 #body>main>.content-box>.item-tab-content #license dd:before
 {
     content: "* 취득일 : ";
-    margin-left: 20px;
 }
 
 
@@ -212,6 +206,4 @@
     padding: 50px;
     text-align: center;
 }
-
-
 
