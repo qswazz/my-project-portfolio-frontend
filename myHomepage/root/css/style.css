@@ -14,7 +14,8 @@
 /* ----------- Header -------------- */
 #header
 {
-    background: rgb(0,64,142);
+    background: #3C946C;
+	color: #FFFFFF;
 }
 
     #header>.content-box
@@ -107,17 +108,17 @@
     
     #body>.body-aside>.content-box>.list-tabs>li>.item-tab:hover
     {
-        background:rgb(0,64,142);
+        --background: #40755E;
+		background: #3C946C;
     }
     
     #body>.body-aside>.content-box>.list-tabs>li>.item-tab.active
     {
-        background-color:rgb(0,64,142);
+        background-color: #3C946C;
     }
 
 
 /* ----------- Body (main) -------------- */
-
 #body>main
 {
     background: rgb(191,191,191);
@@ -176,8 +177,6 @@
         }
 
 
-
-
 #body>main>.content-box>.item-tab-content .definition-list>dd
 {
     font-size: 70%;
@@ -198,7 +197,6 @@
 
 
 
-
 /* ----------- Footer -------------- */
 #footer>.content-box
 {
@@ -207,3 +205,59 @@
     text-align: center;
 }
 
+
+
+
+/* ----------- test -------------- */
+.indent
+{
+	text-indent: 10px;
+}
+
+/* Table 1 */
+main #tab-content2>#history>.table
+{
+	border-collapse: collapse;
+	width: 70%;
+	height: 250px;
+}
+
+main #tab-content2>#history>.table td
+, main #tab-content2>#history>.table th
+{
+	padding: 7px;
+	border: 1px solid #DDD;
+}
+
+main #tab-content2>#history>.table tr:nth-child(even)
+, main #tab-content2>#grade>.table tr:nth-child(even)
+{
+	background: #F2F2F2;
+}
+
+main #tab-content2>#history>.table th
+, main #tab-content2>#grade>.table th
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: #32BEBE;
+	color: #FFF;
+	text-align: center;
+}
+
+
+/* Table 2 */
+main #tab-content2>#grade>.table
+{
+	border-collapse: collapse;
+	width: 50%;
+	height: 250px;
+}
+
+main #tab-content2>#grade>.table td
+, main #tab-content2>#grade>.table th
+{
+	padding: 7px;
+	border: 1px solid #DDD;
+	text-align: center;
+}
