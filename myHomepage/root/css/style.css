@@ -1,5 +1,6 @@
 @import url(reset.css);
 
+
 .backslash
 {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" /></svg>');
@@ -14,7 +15,7 @@
 /* ----------- Header -------------- */
 #header
 {
-    background: #3C946C;
+    background: #3c7194;
 	color: #FFFFFF;
 }
 
@@ -102,31 +103,30 @@
     #body>.body-aside>.content-box>.list-tabs .item-tab
     {
         display: block;
-        line-height: 50px;
+        line-height: 70px;
 		transition: background-color 500ms ease 10ms
     }
     
     #body>.body-aside>.content-box>.list-tabs>li>.item-tab:hover
     {
-        --background: #40755E;
-		background: #3C946C;
+		background: #3c7194;
     }
     
     #body>.body-aside>.content-box>.list-tabs>li>.item-tab.active
     {
-        background-color: #3C946C;
+        background-color: #3c7194;
     }
 
 
 /* ----------- Body (main) -------------- */
 #body>main
 {
-    background: rgb(191,191,191);
+    background: #ededed;
 }
 
     #body>main>.content-box
     {
-        padding: 40px 20px;
+        padding: 50px;
     }
 
         #body>main>.content-box>.item-tab-content
@@ -155,6 +155,7 @@
             {
                 font-size: 120%;
                 font-weight: bold;
+                margin-bottom: 20px;
             }
 
         #body>main>.content-box>#tab-content1 .sub-title
@@ -200,8 +201,10 @@
 /* ----------- Footer -------------- */
 #footer>.content-box
 {
-    background: dimgray;
-    padding: 50px;
+    background: #2d5471;
+    color: #d3d3d3;
+    font-size: 70%;
+    padding: 30px;
     text-align: center;
 }
 
@@ -211,53 +214,83 @@
 /* ----------- test -------------- */
 .indent
 {
-	text-indent: 10px;
+	text-indent: 20px;
 }
 
 /* Table 1 */
 main #tab-content2>#history>.table
 {
+    margin-left: 20px;
 	border-collapse: collapse;
 	width: 70%;
-	height: 250px;
+	height: 500px;
 }
 
-main #tab-content2>#history>.table td
-, main #tab-content2>#history>.table th
-{
-	padding: 7px;
-	border: 1px solid #DDD;
-}
-
-main #tab-content2>#history>.table tr:nth-child(even)
-, main #tab-content2>#grade>.table tr:nth-child(even)
-{
-	background: #F2F2F2;
-}
-
-main #tab-content2>#history>.table th
-, main #tab-content2>#grade>.table th
-{
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background: #32BEBE;
-	color: #FFF;
-	text-align: center;
-}
-
+      main #tab-content2>#history>.table td
+    , main #tab-content2>#history>.table th
+    {
+        padding: 7px;
+    }
 
 /* Table 2 */
 main #tab-content2>#grade>.table
 {
+    margin-left: 20px;
 	border-collapse: collapse;
 	width: 50%;
-	height: 250px;
+	height: 300px;
 }
 
-main #tab-content2>#grade>.table td
-, main #tab-content2>#grade>.table th
+    main #tab-content2>#grade>.table td:last-child:nth-child(2n)
+    {
+        color: lightgray;
+    }
+
+      main #tab-content2>#grade>.table td
+    , main #tab-content2>#grade>.table th
+    {
+        padding: 7px;
+        text-align: center;
+    }
+
+/* Table 3 */
+main #tab-content2>#license>.table
 {
-	padding: 7px;
-	border: 1px solid #DDD;
-	text-align: center;
+    margin-left: 20px;
+	border-collapse: collapse;
+	width: 30%;
+	height: 300px;
 }
+
+      main #tab-content2>#license>.table td
+    , main #tab-content2>#license>.table th
+    {
+        padding: 7px;
+    }
+
+
+  main #tab-content2>#history>.table tr:nth-child(even)
+, main #tab-content2>#grade>.table tr:nth-child(even)
+, main #tab-content2>#license>.table tr:nth-child(even)
+{
+	background: #F2F2F2;
+}
+
+  main #tab-content2>#history>.table td
+, main #tab-content2>#license>.table td
+{
+    text-align: center;
+}
+
+  main #tab-content2>#history>.table th
+, main #tab-content2>#grade>.table th
+, main #tab-content2>#license>.table th
+{
+    background: rgba(43,141,191, 0.5);
+	color: #FFF;
+	text-align: center;
+    
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
