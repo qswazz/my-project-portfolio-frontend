@@ -79,7 +79,7 @@
 
 #body
 {
-    width: 90%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -294,3 +294,39 @@ main #tab-content2>#license>.table
 	padding-bottom: 15px;
 }
 
+
+
+
+
+
+/* ----- 디자인 테스트 코드 ----- */
+#test-sec
+{
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    width: 40%;
+}
+#test-sec>img
+{
+    height: 250px;
+}
+#test-sec:hover
+{
+    background: #ededed;
+}
+#test-sec>p
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+#test-sec>#test-title
+{
+    font-weight: bold;
+}
+#test-sec>#test-content
+{
+    font-size: 90%;
+    margin-bottom: 20px;
+}
