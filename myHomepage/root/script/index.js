@@ -32,22 +32,48 @@ function clickTabs(t)
 //#endregion [Tab Function]
 
 
-//#region [Hover mp4 Play]
-const vdo = document.querySelector(".content-mp4");
 
-const VIDEO_PLAY = "play";
+//#region [Popup Control]
+const popup = document.querySelector(".popup");
+const popupDetail = popup.querySelector(".popup-detail");
 
-vdo.addEventListener("mouseover", PlayVideo);
-vdo.addEventListener("mouseout", PauseVideo);
+const SHOW_POPUP = "show";
 
-function PlayVideo()
+popup.addEventListener("click", ModalClicked);
+
+function ModalClicked(event)
 {
-    vdo.classList.add(VIDEO_PLAY);
+    if(event.target !== popupDetail)
+    {
+        popup.classList.toggle(SHOW_POPUP);
+    }
+}
+//#endregion [Popup Control]
+
+
+
+//#region [Hover mp4 Play]
+const vdoSections = document.querySelectorAll(".content-video");
+
+vdoSections.forEach(function(v)
+{
+    v.addEventListener("mouseenter", PlayVideo, false);
+    v.addEventListener("mouseleave", PauseVideo, false);
+    v.addEventListener("click", ModalClicked);
+});
+
+function PlayVideo(event)
+{
+    event.stopPropagation();
+    const vdo = this.querySelector(".js-video");
     vdo.play();
 }
-function PauseVideo()
+
+function PauseVideo(event)
 {
-    vdo.classList.remove(VIDEO_PLAY);
+    event.stopPropagation();
+    const vdo = this.querySelector(".js-video");
+    vdo.currentTime = 0;
     vdo.pause();
 }
 //#endregion [Hover mp4 Play]

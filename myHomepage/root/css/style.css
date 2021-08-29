@@ -300,33 +300,68 @@ main #tab-content2>#license>.table
 
 
 /* ----- 디자인 테스트 코드 ----- */
-#test-sec
+#body>main>.content-box>#tab-content3>.content-video
 {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
     background: #FFF;
     width: 40%;
+    margin-left: 20px;
+    margin-bottom: 50px;
 }
-#test-sec>img
+.js-video
 {
-    height: 250px;
+    width: 100%;
 }
-#test-sec:hover
+#body>main>.content-box>#tab-content3>.content-video:hover
 {
-    background: #ededed;
+    background: lightgray;
+    cursor: pointer;
 }
-#test-sec>p
+
+
+#body>main>.content-box>#tab-content3>.content-video p
 {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
 }
-#test-sec>#test-title
+#body>main>.content-box>#tab-content3>.content-video #video-title
 {
     font-weight: bold;
 }
-#test-sec>#test-content
+#body>main>.content-box>#tab-content3>.content-video #video-content
 {
     font-size: 90%;
     margin-bottom: 20px;
+}
+
+
+/* 팝업 테스트 코드 */
+main .popup
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    text-align: center;
+    vertical-align: middle;
+}
+main .popup.show
+{
+    display: block;
+}
+main .popup>.popup-detail
+{
+    position: absolute;
+    width: 90%;
+    height: 95%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
 }
