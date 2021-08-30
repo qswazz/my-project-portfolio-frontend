@@ -11,6 +11,11 @@
     display: none !important;
 }
 
+.indent
+{
+	text-indent: 20px;
+}
+
 
 /* ----------- Header -------------- */
 #header
@@ -144,7 +149,8 @@
                 margin-bottom: 50px;
             }
 
-        #body>main>.content-box .content-title
+        /* #body>main>.content-box .content-title */
+        #body>main .content-title
         {
             font-size: 200%;
             font-weight: bold;
@@ -196,28 +202,7 @@
 }
 
 
-
-
-/* ----------- Footer -------------- */
-#footer>.content-box
-{
-    background: #2d5471;
-    color: #d3d3d3;
-    font-size: 70%;
-    padding: 30px;
-    text-align: center;
-}
-
-
-
-
-/* ----------- test -------------- */
-.indent
-{
-	text-indent: 20px;
-}
-
-/* Table 1 */
+/* chap2 - Table 1 */
 main #tab-content2>#history>.table
 {
     margin-left: 20px;
@@ -232,7 +217,7 @@ main #tab-content2>#history>.table
         padding: 7px;
     }
 
-/* Table 2 */
+/* chap2 - Table 2 */
 main #tab-content2>#grade>.table
 {
     margin-left: 20px;
@@ -253,7 +238,7 @@ main #tab-content2>#grade>.table
         text-align: center;
     }
 
-/* Table 3 */
+/* chap2 - Table 3 */
 main #tab-content2>#license>.table
 {
     margin-left: 20px;
@@ -297,9 +282,23 @@ main #tab-content2>#license>.table
 
 
 
+/* ----------- Footer -------------- */
+#footer>.content-box
+{
+    background: #2d5471;
+    color: #d3d3d3;
+    font-size: 70%;
+    padding: 30px;
+    text-align: center;
+}
 
 
-/* ----- 디자인 테스트 코드 ----- */
+
+
+
+
+
+/* ----- portfolio탭 video ----- */
 #body>main>.content-box>#tab-content3>.content-video
 {
     display: inline-block;
@@ -308,16 +307,17 @@ main #tab-content2>#license>.table
     margin-left: 20px;
     margin-bottom: 50px;
 }
+
 .js-video
 {
     width: 100%;
 }
+
 #body>main>.content-box>#tab-content3>.content-video:hover
 {
     background: lightgray;
     cursor: pointer;
 }
-
 
 #body>main>.content-box>#tab-content3>.content-video p
 {
@@ -325,10 +325,12 @@ main #tab-content2>#license>.table
     margin-right: 20px;
     margin-top: 20px;
 }
+
 #body>main>.content-box>#tab-content3>.content-video #video-title
 {
     font-weight: bold;
 }
+
 #body>main>.content-box>#tab-content3>.content-video #video-content
 {
     font-size: 90%;
@@ -336,8 +338,9 @@ main #tab-content2>#license>.table
 }
 
 
+
 /* 팝업 테스트 코드 */
-main .popup
+#body>.popup-background
 {
     display: none;
     position: fixed;
@@ -350,11 +353,22 @@ main .popup
     text-align: center;
     vertical-align: middle;
 }
-main .popup.show
+#body>.popup-background>.popup-content
+{
+    display: none;
+}
+
+#body>.popup-background>.popup-content.show
 {
     display: block;
 }
-main .popup>.popup-detail
+
+#body>.popup-background.show
+{
+    display: block;
+}
+
+#body>.popup-background>.popup-content
 {
     position: absolute;
     width: 90%;
@@ -364,4 +378,9 @@ main .popup>.popup-detail
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
+}
+
+#body>.popup-background>.popup-content>div>.js-video
+{
+    width: 70%;
 }

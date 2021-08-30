@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>My Homepage</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet">    
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
 
@@ -86,9 +87,6 @@
                 </section>
 
 
-                <hr>
-
-
                 <!-- 2. 학력 및 이력 -->
                 <section id="tab-content2" class="item-tab-content">
                     <h1 class="content-title">Resume</h1>
@@ -139,34 +137,6 @@
 						</table>
 					</section>
 					
-					<!-- 임시변경 -->
-					<!--
-                    <section class="content">
-                        <h1 class="sub-title">학력</h1>
-                        <dl class="definition-list indent">
-                            <dt>서울 길동초등학교</dt>
-                            <dd>2000-03 ~ 2006-02 졸업</dd>
-							
-                            <dt>서울 신명중학교</dt>
-                            <dd>2006-03 ~ 2009-02 졸업</dd>
-							
-                            <dt>서울 둔촌고등학교</dt>
-                            <dd>2009-03 ~ 2012-02 졸업</dd>
-                            
-                            <dt><a href="https://web.kangnam.ac.kr/" target="_blank">강남대학교</a> 컴퓨터미디어공학부 미디어정보공학</dt>
-                            <dd>2012-03 ~ 2019-02 졸업</dd>
-                        </dl>
-
-                        <br>
-
-                        <h1 class="sub-title">병역</h1>
-                        <dl class="definition-list indent">
-                            <dt>육군 - 통신 운용/정비</dt>
-                            <dd>2014-02 ~ 2015-11 병장 만기 제대</dd>
-                        </dl>
-                    </section>
-					-->
-					
                     <section id="grade" class="content">
                         <h1 class="sub-title">학점</h1>
                         <table class="table">
@@ -176,35 +146,30 @@
                                 <th>2학기</th>
                                 <th>평균</th>
                             </tr>
-
                             <tr>
                                 <td>1학년</td>
                                 <td>3.81</td>
                                 <td>4.26</td>
                                 <td>4.04 / 4.50</td>
                             </tr>
-                            
                             <tr>
                                 <td>2학년</td>
                                 <td>4.50</td>
                                 <td>3.97</td>
                                 <td>4.24 / 4.50</td>
                             </tr>
-                            
                             <tr>
                                 <td>3학년</td>
                                 <td>4.25</td>
                                 <td>4.00</td>
                                 <td>4.13 / 4.50</td>
                             </tr>
-                            
                             <tr>
                                 <td>4학년</td>
                                 <td>4.07</td>
                                 <td>4.00</td>
                                 <td>4.04 / 4.50</td>
                             </tr>
-                            
                             <tr>
                                 <td>총 평균</td>
                                 <td colspan="2">-</td>
@@ -238,63 +203,17 @@
                                 <td>2019-08</td>
                             </tr>
                         </table>
-
-                        <!-- 임시변경 -->
-                        <!-- <dl id="license" class="definition-list indent">
-                            <dt>2종 보통 운전면허</dt>
-                            <dd>2000-00</dd>
-                            
-                            <dt>워드프로세서</dt>
-                            <dd>2000-00</dd>
-                            
-                            <dt>컴퓨터활용능력</dt>
-                            <dd>2000-00</dd>
-                            
-                            <dt>정보처리기사</dt>
-                            <dd>2000-00</dd>
-                        </dl> -->
                     </section>
-
-					<!--
-                    <section class="content">
-                        <h1 class="sub-title">경력 사항</h1>
-                        
-                        <table border="1">
-                            <tr>
-                                <th>회사명</th>
-                                <th>근무기간</th>
-                                <th>직급</th>
-                                <th>역할</th>
-                                <th>참여 프로젝트</th>
-                            </tr>
-                            
-                            <tr>
-                                <td rowspan="2"><a href="https://www.huensystem.com/" target="_blank">휴엔시스템</a></td>
-                                <td rowspan="2">2019-09 ~ 2021-12-30 (00개월)</td>
-                                <td rowspan="2">사원 (신입)</td>
-                                <td rowspan="2">C# .Net 초급 개발자</td>
-                                <td>통합 시공 관리 시스템 개발 참여</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>통합 입찰 관리 시스템 개발 참여</td>
-                            </tr>
-
-                        </table>
-                    </section>
-					-->
                 </section>
 
 
-                <hr>
 
                 <!-- 3. 포트폴리오 -->
                 <section id="tab-content3" class="item-tab-content">
                     <h1 class="content-title">Portfolio</h1>
 
-                    <section class="content-video">
-                        <video class="js-video"
-                                src="resource/Sequence01.mp4" muted="true" loop="true">
+                    <section data-link="video1" class="content-video">
+                        <video class="js-video" src="resource/video/preview/preview01.mp4" muted="true" loop="true">
                             video 태그를 지원하지 않는 브라우저입니다.
                         </video>
                         <p id="video-title">Title1</p>
@@ -303,9 +222,8 @@
                         </p>
                     </section>
 
-                    <section class="content-video">
-                        <video class="js-video"
-                                src="resource/Sequence02.mp4" muted="true" loop="true">
+                    <section data-link="video2" class="content-video">
+                        <video class="js-video" src="resource/video/preview/preview02.mp4" muted="true" loop="true">
                             video 태그를 지원하지 않는 브라우저입니다.
                         </video>
                         <p id="video-title">Title2</p>
@@ -314,9 +232,8 @@
                         </p>
                     </section>
 
-                    <section class="content-video">
-                        <video class="js-video"
-                                src="resource/Sequence03.mp4" muted="true" loop="true">
+                    <section data-link="video3" class="content-video">
+                        <video class="js-video" src="resource/video/preview/preview03.mp4" muted="true" loop="true">
                             video 태그를 지원하지 않는 브라우저입니다.
                         </video>
                         <p id="video-title">Title3</p>
@@ -325,9 +242,8 @@
                         </p>
                     </section>
 
-                    <section class="content-video">
-                        <video class="js-video"
-                                src="resource/Sequence04.mp4" muted="true" loop="true">
+                    <section data-link="video4" class="content-video">
+                        <video class="js-video" src="resource/video/preview/preview04.mp4" muted="true" loop="true">
                             video 태그를 지원하지 않는 브라우저입니다.
                         </video>
                         <p id="video-title">Title4</p>
@@ -335,20 +251,27 @@
                             Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
                         </p>
                     </section>
-
                 </section>
             </section>
-
-        
-            <!-- ? 팝업창 -->
-            <div class="popup">
-                <div class="popup-detail">
-                    (팝업) 세부 내용입니다.
-                </div>
-            </div> 
-            
-
         </main>
+
+
+        <div class="popup-background">
+            <section id="video1" class="popup-content">
+                <h1 class="content-title">Detail Title</h1>
+                <div>
+                    <video class="js-video" src="resource/video/full/project1/01.mp4" controls></video>
+                    <!-- <video class="js-video" src="resource/video/full/project1/게임화면.mp4" controls></video> -->
+                </div>
+            </section>
+            
+            <section id="video2" class="popup-content">
+                <h1 class="content-title">Detail Title</h1>
+                <div>
+                    <video class="js-video" src="resource/video/full/project2/02.mp4" controls></video>
+                </div>
+            </section>
+        </div>
 
     </div>
 
@@ -365,7 +288,11 @@
     </footer>
 
 
-    <script src="script/index.js"></script>
+
+    <!-- Script ------------------------------------------------------ -->
+    <script src="script/tabController.js"></script>
+    <script src="script/popupController.js"></script>
+    <script src="script/videoController.js"></script>
 
 </body>
 </html>
