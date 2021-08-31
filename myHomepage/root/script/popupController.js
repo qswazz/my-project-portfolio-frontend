@@ -1,6 +1,9 @@
 //#region [Popup Control]
 const popupBackground = document.querySelector("#body>.popup-background");
+const body = document.querySelector("body");
+
 const SHOW_POPUP = "show";
+const NOT_SCROLL = "hidden";
 
 function ShowPopup(event)
 {
@@ -14,6 +17,7 @@ function ShowPopup(event)
     {
         popupContent.classList.toggle(SHOW_POPUP);
         popupBackground.classList.toggle(SHOW_POPUP);
+        body.classList.toggle(NOT_SCROLL);
     }
 }
 
@@ -28,7 +32,7 @@ function ClickPopup(event)
         {
             p.classList.remove("show");
         });
-        
+        body.classList.toggle(NOT_SCROLL);
     }
 }
 

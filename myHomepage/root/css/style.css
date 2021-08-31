@@ -16,11 +16,22 @@
 	text-indent: 20px;
 }
 
+.scroll
+{
+    overflow: auto;
+}
+
+.scroll.hidden
+{
+    overflow: hidden;
+}
+
+
 
 /* ----------- Header -------------- */
 #header
 {
-    background: #3c7194;
+    background: rgba(0,38,75, 0.9);
 	color: #FFFFFF;
 }
 
@@ -132,6 +143,7 @@
     #body>main>.content-box
     {
         padding: 50px;
+        overflow: auto;
     }
 
         #body>main>.content-box>.item-tab-content
@@ -172,34 +184,18 @@
         }
 
 
-        #body>main>.content-box .video-portfolio>img
+
+        #body>main>.content-box>#tab-content3.active
         {
-            float: left;
-            margin-right: 20px;
+            display: flex;
+            flex-wrap: wrap;
         }
-
-        #body>main>.content-box .video-portfolio br
+        
+        #body>main>.content-box>#tab-content3>.content-title
         {
-            clear: both;
+            width: 100%;
         }
-
-
-#body>main>.content-box>.item-tab-content .definition-list>dd
-{
-    font-size: 70%;
-    margin-left: 20px;
-	margin-bottom: 20px;
-}
-
-#body>main>.content-box>.item-tab-content .definition-list dd:nth-of-type(n)::before
-{
-    content: "* 기간(년, 월) : ";
-}
-
-#body>main>.content-box>.item-tab-content #license dd:before
-{
-    content: "* 취득일 : ";
-}
+        
 
 
 /* chap2 - Table 1 */
@@ -285,7 +281,7 @@ main #tab-content2>#license>.table
 /* ----------- Footer -------------- */
 #footer>.content-box
 {
-    background: #2d5471;
+    background: rgba(0,38,75, 0.9);
     color: #d3d3d3;
     font-size: 70%;
     padding: 30px;
@@ -304,38 +300,39 @@ main #tab-content2>#license>.table
     display: inline-block;
     background: #FFF;
     width: 40%;
+    --height: 400px;
     margin-left: 20px;
     margin-bottom: 50px;
 }
 
-.js-video
-{
-    width: 100%;
-}
+    #body>main>.content-box>#tab-content3>.content-video:hover
+    {
+        background: lightgray;
+        cursor: pointer;
+    }
 
-#body>main>.content-box>#tab-content3>.content-video:hover
-{
-    background: lightgray;
-    cursor: pointer;
-}
+        #body>main>.content-box>#tab-content3>.content-video>.js-video
+        {
+            width: 100%;
+        }
 
-#body>main>.content-box>#tab-content3>.content-video p
-{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-}
+        #body>main>.content-box>#tab-content3>.content-video p
+        {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
 
-#body>main>.content-box>#tab-content3>.content-video #video-title
-{
-    font-weight: bold;
-}
+        #body>main>.content-box>#tab-content3>.content-video #video-title
+        {
+            font-weight: bold;
+        }
 
-#body>main>.content-box>#tab-content3>.content-video #video-content
-{
-    font-size: 90%;
-    margin-bottom: 20px;
-}
+        #body>main>.content-box>#tab-content3>.content-video #video-content
+        {
+            font-size: 90%;
+            margin-bottom: 20px;
+        }
 
 
 
@@ -353,34 +350,42 @@ main #tab-content2>#license>.table
     text-align: center;
     vertical-align: middle;
 }
-#body>.popup-background>.popup-content
-{
-    display: none;
-}
+    #body>.popup-background>.popup-content
+    {
+        display: none;
+        overflow: auto;
+    }
+    
+        #body>.popup-background>.popup-content>.content-title
+        {
+            margin: 20px;
+            font-size: 200%;
+        }
 
-#body>.popup-background>.popup-content.show
-{
-    display: block;
-}
+    #body>.popup-background>.popup-content.show
+    {
+        display: block;
+    }
+    
 
-#body>.popup-background.show
-{
-    display: block;
-}
+    #body>.popup-background.show
+    {
+        display: block;
+    }
 
-#body>.popup-background>.popup-content
-{
-    position: absolute;
-    width: 90%;
-    height: 95%;
+    #body>.popup-background>.popup-content
+    {
+        position: absolute;
+        width: 90%;
+        height: 95%;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-}
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+    }
 
-#body>.popup-background>.popup-content>div>.js-video
-{
-    width: 70%;
-}
+    #body>.popup-background>.popup-content>div>.js-video
+    {
+        width: 70%;
+    }
