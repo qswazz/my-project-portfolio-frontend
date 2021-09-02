@@ -95,7 +95,7 @@
 
 #body
 {
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -175,6 +175,7 @@
                 font-weight: bold;
                 margin-bottom: 20px;
             }
+
 
         #body>main>.content-box>#tab-content1 .sub-title
         {
@@ -389,3 +390,54 @@ main #tab-content2>#license>.table
     {
         width: 70%;
     }
+
+
+/* --------- SVG 영역 --------- */
+#body>main>.content-box>#tab-content1 #svg
+{
+    width: 100%;
+    height: 1000px;
+}
+
+#body>main>.content-box>#tab-content1 #svg>g>rect
+{
+    stroke: navy;
+	stroke-width: 5px;
+	fill: #FFF;
+	rx: 30;
+	ry: 30;
+	transition: fill 400ms linear 100ms, transform 300ms;
+}
+
+#body>main>.content-box>#tab-content1 #svg>g>text
+{
+	transition: fill 400ms linear 100ms, transform 300ms;
+	text-anchor: middle;
+}
+
+#body>main>.content-box>#tab-content1 #svg>g:hover rect
+{
+	fill: skyblue;
+	transform: scale(1.2, 1.2);
+    transform: translate(-1%, -1%);
+}
+
+#body>main>.content-box>#tab-content1 #svg>g:hover text
+{
+	fill: navy;
+	transform: scale(1.2, 1.2);
+    transform: translate(-1%, -1%);
+}
+
+#body>main>.content-box>#tab-content1 #svg>path
+{
+	fill: none;
+	stroke: #000;
+	stroke-width: 3px;
+}
+
+
+#body>main>.content-box>#tab-content1 #svg>g
+{
+    transition: transform 2s;
+}
