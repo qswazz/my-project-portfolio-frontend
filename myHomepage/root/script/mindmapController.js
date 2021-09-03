@@ -9,7 +9,7 @@ var objGroup0 =
 
 var objGroup1 =
 [ 
-	 {level: "lv1", parentId: "lv0-0", id: "lv1-1", dir: 30, x: 0, y: 0 , txt: "Text22222"}
+	 {level: "lv1", parentId: "lv0-0", id: "lv1-1", dir: 60, x: 0, y: 0 , txt: "Text22222"}
 	,{level: "lv1", parentId: "lv0-0", id: "lv1-2", dir: 210, x: 0, y: 0 , txt: "Text333333333"}
 ];
 
@@ -60,8 +60,8 @@ function Create(item)
 	
     // Rect
 	const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-	rect.setAttribute('width', bBoxText.width + TEXT_MARGIN * 2);
-	rect.setAttribute('height', bBoxText.height + TEXT_MARGIN * 2);
+	rect.setAttribute('width', bBoxText.width + TEXT_MARGIN);
+	rect.setAttribute('height', bBoxText.height + TEXT_MARGIN * 1.5);
 	group.prepend(rect);
 	const bBoxRect = rect.getBBox();
 	
@@ -105,53 +105,11 @@ function ChangeLocation(parent, child)
 		{
 			if(parent[i].id === child[j].parentId)
 			{
-				const moveX = Math.cos(child[j].dir) * 200;
-				const moveY = Math.sin(child[j].dir) * 200;
-				
+				const moveX = Math.cos(child[j].dir*Math.PI/180) * 180;
+				const moveY = Math.sin(child[j].dir*Math.PI/180) * 180;
+			
 				child[j].x = parent[i].x + moveX;
-				child[j].y = parent[i].y - moveY;
-				// switch(child[j].dir)
-				// {
-					// case '+0':
-						// child[j].x = parent[i].x + 200;
-						// child[j].y = parent[i].y;
-						// break;
-						
-					// case '++':
-						// child[j].x = parent[i].x + 150;
-						// child[j].y = parent[i].y - 150;
-						// break;
-						
-					// case '0+':
-						// child[j].x = parent[i].x;
-						// child[j].y = parent[i].y - 200;
-						// break;
-						
-					// case '-+':
-						// child[j].x = parent[i].x - 150;
-						// child[j].y = parent[i].y - 150;
-						// break;
-						
-					// case '-0':
-						// child[j].x = parent[i].x - 200;
-						// child[j].y = parent[i].y;
-						// break;
-						
-					// case '--':
-						// child[j].x = parent[i].x - 150;
-						// child[j].y = parent[i].y + 150;
-						// break;
-						
-					// case '0-':
-						// child[j].x = parent[i].x;
-						// child[j].y = parent[i].y + 200;
-						// break;
-						
-					// case '+-':
-						// child[j].x = parent[i].x + 150;
-						// child[j].y = parent[i].y + 150;
-						// break;
-				// }
+				child[j].y = parent[i].y + moveY;
 			}
 		}
 	}

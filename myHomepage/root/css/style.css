@@ -143,7 +143,7 @@
     #body>main>.content-box
     {
         padding: 50px;
-        overflow: auto;
+        overflow: visible;
     }
 
         #body>main>.content-box>.item-tab-content
@@ -397,47 +397,71 @@ main #tab-content2>#license>.table
 {
     width: 100%;
     height: 1000px;
+    overflow: visible;
 }
 
 #body>main>.content-box>#tab-content1 #svg>g>rect
 {
-    stroke: navy;
-	stroke-width: 5px;
+    stroke: #191970;
+	stroke-width: 2px;
 	fill: #FFF;
-	rx: 30;
-	ry: 30;
-	transition: fill 400ms linear 100ms, transform 300ms;
+	rx: 20;
+	ry: 20;
+	transition: fill 200ms ease-out 100ms, transform 300ms;
 }
 
 #body>main>.content-box>#tab-content1 #svg>g>text
 {
-	transition: fill 400ms linear 100ms, transform 300ms;
 	text-anchor: middle;
+    font-size: 13px;
+	transition: fill 200ms ease-out 100ms, transform 300ms;
 }
 
 #body>main>.content-box>#tab-content1 #svg>g:hover rect
 {
-	fill: skyblue;
-	transform: scale(1.2, 1.2);
-    transform: translate(-1%, -1%);
+	fill: #00498c;
+	transform: scale(1.2);
 }
 
 #body>main>.content-box>#tab-content1 #svg>g:hover text
 {
-	fill: navy;
-	transform: scale(1.2, 1.2);
-    transform: translate(-1%, -1%);
+	fill: #FFF;
+	transform: scale(1.2);
+}
+
+/* Center */
+#body>main>.content-box>#tab-content1 #svg>#lv0-0 rect
+{
+    stroke: #191970;
+	stroke-width: 2px;
+    fill: #191970;
+    rx: 40;
+    ry: 35;
+    transform: scale(1.5);
+	transition: fill 200ms ease-out 100ms, transform 300ms;
+}
+#body>main>.content-box>#tab-content1 #svg>#lv0-0 text
+{
+    fill: #FFF;
+	text-anchor: middle;
+    font-size: 20px;
+	transition: fill 200ms ease-out 100ms, transform 300ms;
+}
+
+#body>main>.content-box>#tab-content1 #svg>#lv0-0:hover rect
+{
+	fill: #00498c;
+	transform: scale(2);
+}
+#body>main>.content-box>#tab-content1 #svg>#lv0-0:hover text
+{
+	fill: #FFF;
+	transform: scale(2);
 }
 
 #body>main>.content-box>#tab-content1 #svg>path
 {
 	fill: none;
-	stroke: #000;
+	stroke: #191970;
 	stroke-width: 3px;
-}
-
-
-#body>main>.content-box>#tab-content1 #svg>g
-{
-    transition: transform 2s;
 }
