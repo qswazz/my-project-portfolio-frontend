@@ -77,6 +77,7 @@ var objGroup3 =
 const groups = [objGroup0, objGroup1, objGroup2, objGroup3];
 
 const svg = document.getElementById("svg");
+const caution = document.getElementById("caution");
 //#endregion
 
 
