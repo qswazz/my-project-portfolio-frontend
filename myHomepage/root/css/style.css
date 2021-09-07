@@ -28,7 +28,455 @@
 
 
 
+
+/* ----------- 반응형 -------------- */
+@media screen and ( max-width: 481px ) {
+	
+#header
+{
+    background: rgba(0,38,75, 0.9);
+	color: #FFFFFF;
+}
+
+	#header>.content-box
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+
+			padding: 10px;
+        }
+		
+        #header>.content-box>.pic-face
+        {
+            margin-right: auto;
+			margin-left: auto;
+            margin-bottom: 30px;
+        }
+        #header>.content-box>.info
+        {
+			width: 90%;
+			margin-bottom: 50px;
+        }
+
+        #header>.content-box .info dt
+        {
+			float: left;
+			width: 20%;
+			text-align: left;
+        }
+
+        #header>.content-box .info dl
+        {
+			font-size: 80%;
+            width: 100%;
+        }
+	
+		#header>.content-box>.info>.definition-list>dt:nth-of-type(n)~dd:nth-of-type(n)
+		{
+			margin-bottom: 10px;
+			text-align: left;
+		}
+    
+	#body
+	{
+		width: 100%;
+	}
+	
+/* ----------- Body (aside) -------------- */
+#body>.body-aside>.content-box>.list-tabs
+{
+    display: flex;
+    list-style: none;
+    background: rgb(114,114,114);
+    justify-content: center;
+    align-items: center;
+}
+
+    #body>.body-aside>.content-box>.list-tabs>li
+    {
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    #body>.body-aside>.content-box>.list-tabs .item-tab
+    {
+        display: block;
+        line-height: 70px;
+		transition: background-color 500ms ease 10ms
+    }
+    
+    #body>.body-aside>.content-box>.list-tabs>li>.item-tab:hover
+    {
+		background: #3c7194;
+    }
+    
+    #body>.body-aside>.content-box>.list-tabs>li>.item-tab.active
+    {
+        background-color: #3c7194;
+    }
+
+
+/* ----------- Body (main) -------------- */
+#body>main
+{
+    background: #ededed;
+}
+
+    #body>main>.content-box
+    {
+        padding: 10px;
+        overflow: visible;
+    }
+	
+        #body>main>.content-box>.item-tab-content
+        {
+            display: none;
+        }
+        
+        #body>main>.content-box>.item-tab-content.active
+        {
+            display: block;
+        }
+
+            #body>main>.content-box>.item-tab-content>.content
+            {
+                margin-bottom: 50px;
+            }
+
+        #body>main .content-title
+        {
+            font-size: 200%;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+            #body>main>.content-box .sub-title
+            {
+                font-size: 120%;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+
+        #body>main>.content-box>#tab-content1 .sub-title
+        {
+            font-size: 120%;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+
+	
+        #body>main>.content-box>#tab-content3.active
+        {
+            display: flex;
+			flex-direction: column;
+        }
+		
+        #body>main>.content-box>#tab-content3>.content-title
+        {
+            width: 100%;
+        }
+        
+		
+        #body>main>.content-box>#tab-content1 #svg
+		{
+			display: none;
+		}
+        #body>main>.content-box>#tab-content1 #caution
+        {
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-size: 150%;
+			line-height: 100px;
+        }
+		
+            #body>main>.content-box>#tab-content1 #svg>g>rect
+            {
+                stroke: #191970;
+                stroke-width: 2px;
+                fill: #FFF;
+                rx: 20;
+                ry: 20;
+                transition: fill 200ms ease-out 100ms, transform 300ms;
+            }
+
+            #body>main>.content-box>#tab-content1 #svg>g>text
+            {
+                text-anchor: middle;
+                font-size: 13px;
+                transition: fill 200ms ease-out 100ms, transform 300ms;
+            }
+
+                #body>main>.content-box>#tab-content1 #svg>g:hover rect
+                {
+                    cursor: default;
+                    fill: #00498c;
+                    transform: scale(1.2);
+                }
+
+                #body>main>.content-box>#tab-content1 #svg>g:hover text
+                {
+                    cursor: default;
+                    fill: #FFF;
+                    transform: scale(1.2);
+                }
+
+            /* Center */
+            #body>main>.content-box>#tab-content1 #svg>#lv0-0 rect
+            {
+                stroke: #191970;
+                stroke-width: 2px;
+                fill: #191970;
+                rx: 40;
+                ry: 35;
+                transform: scale(1.5);
+                transition: fill 200ms ease-out 100ms, transform 300ms;
+            }
+
+            #body>main>.content-box>#tab-content1 #svg>#lv0-0 text
+            {
+                fill: #FFF;
+                text-anchor: middle;
+                font-size: 20px;
+                transition: fill 200ms ease-out 100ms, transform 300ms;
+            }
+
+                #body>main>.content-box>#tab-content1 #svg>#lv0-0:hover rect
+                {
+                    cursor: default;
+                    fill: #00498c;
+                    stroke: #00498c;
+                    transform: scale(2);
+                }
+
+                #body>main>.content-box>#tab-content1 #svg>#lv0-0:hover text
+                {
+                    cursor: default;
+                    fill: #FFF;
+                    transform: scale(1.5);
+                }
+
+            #body>main>.content-box>#tab-content1 #svg>path
+            {
+                fill: none;
+                stroke: #191970;
+                stroke-width: 3px;
+            }
+
+
+
+		/* ----------- Resume 탭 - 테이블 -------------- */
+        /* chap2 - Table 1 */
+        main #tab-content2>#history>.table
+        {
+            margin-left: auto;
+			margin-right: auto;
+            border-collapse: collapse;
+            width: 100%;
+            height: 400px;
+			font-size: 90%;
+        }
+
+            main #tab-content2>#history>.table td
+            , main #tab-content2>#history>.table th
+            {
+                padding: 4px;
+            }
+
+        /* chap2 - Table 2 */
+        main #tab-content2>#grade>.table
+        {
+            margin-left: auto;
+			margin-right: auto;
+            border-collapse: collapse;
+            width: 100%;
+            height: 200px;
+        }
+
+            main #tab-content2>#grade>.table td:last-child:nth-child(2n)
+            {
+                color: lightgray;
+            }
+
+            main #tab-content2>#grade>.table td
+            , main #tab-content2>#grade>.table th
+            {
+                padding: 3px;
+                text-align: center;
+            }
+
+        /* chap2 - Table 3 */
+        main #tab-content2>#license>.table
+        {
+            margin-left: auto;
+			margin-right: auto;
+            border-collapse: collapse;
+            width: 100%;
+            height: 150px;
+        }
+
+            main #tab-content2>#license>.table td
+            , main #tab-content2>#license>.table th
+            {
+                padding: 3px;
+            }
+
+
+        main #tab-content2>#history>.table tr:nth-child(even)
+        , main #tab-content2>#grade>.table tr:nth-child(even)
+        , main #tab-content2>#license>.table tr:nth-child(even)
+        {
+            background: #F2F2F2;
+        }
+
+        main #tab-content2>#history>.table td
+        , main #tab-content2>#license>.table td
+        {
+            text-align: center;
+        }
+
+        main #tab-content2>#history>.table th
+        , main #tab-content2>#grade>.table th
+        , main #tab-content2>#license>.table th
+        {
+            background: rgba(43,141,191, 0.5);
+            color: #FFF;
+            text-align: center;
+            
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+		
+			
+	/* ----------- Portfolio 탭 video -------------- */
+	#body>main>.content-box>#tab-content3>.content-video
+	{
+		display: inline-block;
+		background: #FFF;
+		width: 90%;
+		margin-left: auto;
+		margin-right:auto;
+		margin-bottom: 50px;
+	}
+	
+    #body>main>.content-box>#tab-content3>.content-video:hover
+    {
+        background: lightgray;
+        cursor: pointer;
+    }
+
+        #body>main>.content-box>#tab-content3>.content-video>.js-video
+        {
+            width: 100%;
+        }
+
+	
+        #body>main>.content-box>#tab-content3>.content-video p
+        {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        #body>main>.content-box>#tab-content3>.content-video #video-title
+        {
+            font-weight: bold;
+        }
+
+        #body>main>.content-box>#tab-content3>.content-video #video-content
+        {
+            font-size: 90%;
+            margin-bottom: 20px;
+        }
+
+
+/* ----------- Portfolio 탭 video 팝업 -------------- */
+#body>.popup-background
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+    #body>.popup-background>.popup-content
+    {
+        position: absolute;
+        width: 80%;
+        height: 90%;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+    }
+	
+
+    #body>.popup-background>.popup-content.show
+    {
+        display: block;
+    }
+    
+
+    #body>.popup-background.show
+    {
+        display: block;
+    }
+
+	#body>.popup-background>.popup-content>.content-title
+	{
+		margin: 20px;
+		font-size: 120%;
+	}
+    #body>.popup-background>.popup-content
+    {
+        position: absolute;
+        width: 90%;
+        height: 95%;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+    }
+
+    #body>.popup-background>.popup-content>div>.js-video
+    {
+        width: 90%;
+    }
+
+
+/* ----------- Footer -------------- */
+#footer>.content-box
+{
+    background: rgba(0,38,75, 0.9);
+    color: #d3d3d3;
+    font-size: 70%;
+    padding: 30px;
+    text-align: center;
+}
+
+}
+
+
+
+
+
+
+
 /* ----------- Header -------------- */
+
+@media screen and ( min-width: 481px ) {
 #header
 {
     background: rgba(0,38,75, 0.9);
@@ -476,198 +924,4 @@
     text-align: center;
 }
 
-
-
-
-/* ----------- 반응형 -------------- */
-@media ( max-width: 480px ) {
-	#header>.content-box
-		{
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-
-			padding: 10px;
-        }
-		
-        #header>.content-box>.pic-face
-        {
-            margin-right: auto;
-			margin-left: auto;
-            margin-bottom: 30px;
-        }
-        #header>.content-box>.info
-        {
-			width: 90%;
-			margin-bottom: 50px;
-        }
-
-        #header>.content-box .info dt
-        {
-			float: left;
-			width: 20%;
-			text-align: left;
-        }
-
-        #header>.content-box .info dl
-        {
-			font-size: 80%;
-            width: 100%;
-        }
-	
-		#header>.content-box>.info>.definition-list>dt:nth-of-type(n)~dd:nth-of-type(n)
-		{
-			margin-bottom: 10px;
-			text-align: left;
-		}
-    
-	#body
-	{
-		width: 100%;
-	}
-	
-    #body>main>.content-box
-    {
-        padding: 10px;
-        overflow: visible;
-    }
-	
-        #body>main>.content-box>#tab-content1 #svg
-		{
-			display: none;
-		}
-        #body>main>.content-box>#tab-content1 #caution
-        {
-			display: block;
-			width: 100%;
-			text-align: center;
-			font-size: 150%;
-			line-height: 100px;
-        }
-	
-        #body>main>.content-box>#tab-content3.active
-        {
-            display: flex;
-			flex-direction: column;
-        }
-		
-		/* ----------- Resume 탭 - 테이블 -------------- */
-        /* chap2 - Table 1 */
-        main #tab-content2>#history>.table
-        {
-            margin-left: auto;
-			margin-right: auto;
-            border-collapse: collapse;
-            width: 100%;
-            height: 400px;
-			font-size: 90%;
-        }
-
-            main #tab-content2>#history>.table td
-            , main #tab-content2>#history>.table th
-            {
-                padding: 4px;
-            }
-
-        /* chap2 - Table 2 */
-        main #tab-content2>#grade>.table
-        {
-            margin-left: auto;
-			margin-right: auto;
-            border-collapse: collapse;
-            width: 100%;
-            height: 200px;
-        }
-
-            main #tab-content2>#grade>.table td:last-child:nth-child(2n)
-            {
-                color: lightgray;
-            }
-
-            main #tab-content2>#grade>.table td
-            , main #tab-content2>#grade>.table th
-            {
-                padding: 3px;
-                text-align: center;
-            }
-
-        /* chap2 - Table 3 */
-        main #tab-content2>#license>.table
-        {
-            margin-left: auto;
-			margin-right: auto;
-            border-collapse: collapse;
-            width: 100%;
-            height: 150px;
-        }
-
-            main #tab-content2>#license>.table td
-            , main #tab-content2>#license>.table th
-            {
-                padding: 3px;
-            }
-
-
-        main #tab-content2>#history>.table tr:nth-child(even)
-        , main #tab-content2>#grade>.table tr:nth-child(even)
-        , main #tab-content2>#license>.table tr:nth-child(even)
-        {
-            background: #F2F2F2;
-        }
-
-        main #tab-content2>#history>.table td
-        , main #tab-content2>#license>.table td
-        {
-            text-align: center;
-        }
-
-        main #tab-content2>#history>.table th
-        , main #tab-content2>#grade>.table th
-        , main #tab-content2>#license>.table th
-        {
-            background: rgba(43,141,191, 0.5);
-            color: #FFF;
-            text-align: center;
-            
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-		
-			
-	/* ----------- Portfolio 탭 video -------------- */
-	#body>main>.content-box>#tab-content3>.content-video
-	{
-		display: inline-block;
-		background: #FFF;
-		width: 90%;
-		margin-left: auto;
-		margin-right:auto;
-		margin-bottom: 50px;
-	}
-	
-	#body>.popup-background>.popup-content>.content-title
-	{
-		margin: 20px;
-		font-size: 120%;
-	}
-	
-    #body>.popup-background>.popup-content
-    {
-        position: absolute;
-        width: 80%;
-        height: 90%;
-
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: white;
-    }
-	
-    #body>.popup-background>.popup-content>div>.js-video
-    {
-        width: 90%;
-    }
-
 }
-
