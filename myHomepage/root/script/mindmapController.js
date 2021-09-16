@@ -4,7 +4,7 @@ const TEXT_MARGIN = 20;
 //#region 객체
 var objGroup0 =
 [
-	{level: "lv0", parentId: null, id:"lv0-0", x: 0, y: 0, txt: "I am."}
+	{level: "lv0", parentId: null, id:"lv0-0", x: 200, y: 200, txt: "I am."}
 ];
 
 var objGroup1 =
@@ -84,12 +84,12 @@ const caution = document.getElementById("caution");
 
 function Create(item)
 {
-	if(item.x == null
-    || item.y == null
-    || item.txt == null)
-	{
-		return;
-	}	
+	// if(item.x == null
+    // || item.y == null
+    // || item.txt == null)
+	// {
+	// 	return;
+	// }	
 	
     // Group
 	const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
@@ -162,12 +162,12 @@ function ChangeLocation(parent, child)
 }
 
 
-const tab = document.getElementById("tab-content1");
+const tab = document.querySelector("a[href='#tab-content1']");
 
 function init()
 {
-    objGroup0[0].x = svg.width.animVal.value / 2;
-    objGroup0[0].y = svg.height.animVal.value / 2.5;
+    objGroup0[0].x = svg.width.baseVal.value / 2;
+    objGroup0[0].y = svg.height.baseVal.value / 2.5;
 
     while(svg.hasChildNodes())
     {
@@ -199,4 +199,6 @@ window.addEventListener("resize", function(r)
     init();
 });
 
-init();
+tab.addEventListener("click", function(r){
+	init();
+});

@@ -524,21 +524,22 @@
 
         #header>.content-box .info dt
         {
-			float: left;
-			width: 20%;
+            float: none;
+			width: 40%;
 			text-align: left;
         }
 
         #header>.content-box .info dl
         {
-			font-size: 80%;
-            width: 60%;
+			font-size: 70%;
+            width: 100%;
             margin-right: auto;
             margin-left: auto;
         }
 	
 		#header>.content-box>.info>.definition-list>dt:nth-of-type(n)~dd:nth-of-type(n)
 		{
+            margin-left: 60px;
 			margin-bottom: 10px;
 			text-align: left;
 		}
