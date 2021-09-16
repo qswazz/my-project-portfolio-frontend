@@ -27,6 +27,6 @@ function clickTabs(t)
     const focusedTab = document.querySelector(selectedTab);
 
     this.classList.add(CLICKED_STAT);
-    focusedTab.classList.add(CLICKED_STAT);    
+    focusedTab.classList.add(CLICKED_STAT);
 }
 //#endregion [Tab Function]

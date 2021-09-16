@@ -11,7 +11,7 @@ function ShowPopup(event)
     
     if(popupContent === null)
     {
-        alert("상세 내용이 없습니다.");
+        alert("준비 중 입니다.");
     }
     else
     {

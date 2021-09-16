@@ -162,11 +162,12 @@ function ChangeLocation(parent, child)
 }
 
 
+const tab = document.getElementById("tab-content1");
 
 function init()
 {
-    objGroup0[0].x = svg.width.baseVal.value / 2;
-    objGroup0[0].y = svg.height.baseVal.value / 2.5;
+    objGroup0[0].x = svg.width.animVal.value / 2;
+    objGroup0[0].y = svg.height.animVal.value / 2.5;
 
     while(svg.hasChildNodes())
     {
@@ -188,7 +189,6 @@ function init()
     });
 }
 
-init();
 
 window.addEventListener("load", function(r)
 {
@@ -198,3 +198,5 @@ window.addEventListener("resize", function(r)
 {
     init();
 });
+
+init();
